@@ -3,15 +3,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RalationHumanAnimal {
+public class RalationHumanAnimal implements RealayionInterface {
     // private Human human;
     // private List<Animal> animal;
 
     private Map<Human, List<Animal>> humanToAinmals;
-    public RalationHumanAnimal() {
-        humanToAinmals = new HashMap<>();
+    public RalationHumanAnimal() {                         //ctor
+        humanToAinmals = new HashMap<>();                  //ctor
     }
-
+    @Override
     public void addAnimaltoHuman(Human hum, Animal ani){
         if (humanToAinmals.containsKey(hum)){
             humanToAinmals.get(hum).add(ani);
@@ -21,5 +21,11 @@ public class RalationHumanAnimal {
             forAdding.add(ani);
             humanToAinmals.put(hum, forAdding);
         }
+    }
+
+    @Override
+    public List<Animal> returnAnimalsByHuman(Human human) {
+        
+        return humanToAinmals.get(human);
     }
 }
