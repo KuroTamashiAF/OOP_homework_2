@@ -7,4 +7,8 @@ public abstract class Animal {
     public String getNickname() {
         return nickname;
     }
+    @Override
+    public String toString() {
+        return this.getClass().getName() + " " + nickname;
+    }
 }

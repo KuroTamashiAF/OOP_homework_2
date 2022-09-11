@@ -7,10 +7,11 @@ public class RalationHumanAnimal implements RealayionInterface {
     // private Human human;
     // private List<Animal> animal;
 
-    private Map<Human, List<Animal>> humanToAinmals;
+    protected Map<Human, List<Animal>> humanToAinmals;
     public RalationHumanAnimal() {                         //ctor
         humanToAinmals = new HashMap<>();                  //ctor
     }
+    
     @Override
     public void addAnimaltoHuman(Human hum, Animal ani){
         if (humanToAinmals.containsKey(hum)){
