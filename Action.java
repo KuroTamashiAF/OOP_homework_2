@@ -15,11 +15,15 @@ public class Action extends RalationHumanAnimal {
     public void PetAnCat(Human human, Class<?> cls){
         for (Animal animal : humanToAinmals.get(human)) {
             if (cls.isInstance(animal) && animal.getClass()==Cat.class){
-                System.out.printf("%s is happy",animal.getNickname() );
+                System.out.printf("%s is happy\n",animal.getNickname());
             }
-            System.out.println();
+            //System.out.println();
             if (cls.isInstance(animal) && animal.getClass()==Dog.class){
-                System.out.printf("%s is happy",animal.getNickname() );
+                System.out.printf("%s is happy\n",animal.getNickname());
+            }
+            //System.out.println();
+            if (cls.isInstance(animal) && animal.getClass()==Bear.class){
+                System.out.printf("%s congrats ate you, YOU DEAD",animal.getNickname());
             }
             
         }
